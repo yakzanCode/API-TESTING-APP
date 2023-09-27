@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         if (!isGetMethod && !isDeleteMethod) {
-            fetchOptions.body = body;
+            fetchOptions.body = JSON.parse(body);
         }
 
         fetch(url, fetchOptions)
